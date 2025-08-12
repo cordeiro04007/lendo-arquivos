@@ -2,7 +2,7 @@ arroz
 feijão
 ovos
 leite
-água
+agua
 farinha
 fermento
 farinha

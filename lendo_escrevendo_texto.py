@@ -18,7 +18,7 @@ pasta_atual = Path(__file__).parent
 with open(pasta_atual / 'lista_de_compras.txt') as lista_de_compras:
     print(lista_de_compras.read())
 '''
-
+'''
 #LENDO LINHA A LINHA
 pasta_atual = Path(__file__).parent
 
@@ -27,12 +27,32 @@ with open(pasta_atual / 'lista_de_compras.txt') as lista_de_compras:
     while linha != '':
         print(linha,end = '')
         linha = lista_de_compras.readline()
+'''
 
 
+'''
 # LENDO TODAS AS LINHAS
+pasta_atual = Path(__file__).parent
+with open(pasta_atual / 'lista_de_compras.txt') as lista_de_compras:
+    print(lista_de_compras.readlines())
+'''
 
 
 #ESCREVENDO ARQUIVO
+pasta_atual = Path(__file__).parent
+
+itens_ja_comprados =['farinha', 'fermento', 'agua']
+
+with open(pasta_atual / 'lista_de_compras.txt') as lista_de_compras:
+        itens_lista = lista_de_compras.readlines()
+
+with open(pasta_atual / 'lista_de_compras_atualizada.txt', mode = 'w') as lista_atualizada:
+        for item in itens_lista:
+            if not item.replace('\n', '') in itens_ja_comprados:
+                   lista_atualizada.write(item)
+
+
+
 
 
 # ESCREVENDO LINHA A LINHA
