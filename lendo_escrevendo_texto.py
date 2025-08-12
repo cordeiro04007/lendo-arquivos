@@ -37,7 +37,7 @@ with open(pasta_atual / 'lista_de_compras.txt') as lista_de_compras:
     print(lista_de_compras.readlines())
 '''
 
-
+'''
 #ESCREVENDO ARQUIVO
 pasta_atual = Path(__file__).parent
 
@@ -50,13 +50,35 @@ with open(pasta_atual / 'lista_de_compras_atualizada.txt', mode = 'w') as lista_
         for item in itens_lista:
             if not item.replace('\n', '') in itens_ja_comprados:
                    lista_atualizada.write(item)
+'''
 
-
-
-
+'''
 
 # ESCREVENDO LINHA A LINHA
+pasta_atual = Path(__file__).parent
 
+itens_ja_comprados =['farinha', 'fermento', 'agua']
+
+with open(pasta_atual / 'lista_de_compras.txt') as lista_de_compras:
+        itens_lista = lista_de_compras.readlines()
+
+itens_lista_atualizada = []
+for item in itens_lista:
+        if not item.replace('\n', '') in itens_ja_comprados:
+            itens_lista_atualizada.append(item)
+with open(pasta_atual / 'lista_de_compras_atualizada.txt', mode = 'w') as lista_atualizada:
+       itens_lista_atualizada [-1] = itens_lista_atualizada [-1].replace('\n', '')
+
+       lista_atualizada.writelines(itens_lista_atualizada)        
+'''
 
 # ACRESCENTANDO VALORES A UM ARQUIVO
+pasta_atual = Path(__file__).parent
+novos_itens = ['banana']
 
+novos_itens_c_quebra = []
+
+for item in novos_itens:
+    novos_itens_c_quebra.append(f'\n{item}')
+with open(pasta_atual / 'lista_de_compras.txt', mode = 'a') as lista_adicionada:
+    lista_adicionada.writelines(novos_itens_c_quebra)

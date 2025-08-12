@@ -2,7 +2,7 @@ arroz
 feijão
 ovos
 leite
-agua
+água
 farinha
 fermento
 farinha
@@ -11,3 +11,4 @@ farinha
 fermento
 farinha
 fermento
+banana
