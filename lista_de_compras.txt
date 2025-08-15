@@ -12,3 +12,4 @@ fermento
 farinha
 fermento
 banana
+abacate

@@ -74,7 +74,7 @@ with open(pasta_atual / 'lista_de_compras_atualizada.txt', mode = 'w') as lista_
 
 # ACRESCENTANDO VALORES A UM ARQUIVO
 pasta_atual = Path(__file__).parent
-novos_itens = ['banana']
+novos_itens = ['abacate']
 
 novos_itens_c_quebra = []
 
