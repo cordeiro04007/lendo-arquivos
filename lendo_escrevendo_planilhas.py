@@ -38,12 +38,11 @@ print(tabela_cliente.head(10))
 tabela_cliente = pd.read_excel(pasta_atual/ 'planilhas'/ 'clientes.xlsx', sheet_name = 'SC', thousands='.')
 print(tabela_cliente.head(10))
 '''
-'''
 #escrevendo planilha
 tabela_cliente = pd.read_excel(pasta_atual/ 'planilhas'/ 'clientes.xlsx')
 tabela_cliente.to_excel(pasta_atual/ 'planilhas'/ 'copia_clientes.xlsx')
-'''
 
+'''
 #escrevendo diversas abas
 tabela_cliente_rs = pd.read_excel(pasta_atual/ 'planilhas'/ 'clientes.xlsx', sheet_name= 'RS')
 tabela_cliente_sc = pd.read_excel(pasta_atual/ 'planilhas'/ 'clientes.xlsx', sheet_name= 'SC')
@@ -51,3 +50,4 @@ tabela_cliente_sc = pd.read_excel(pasta_atual/ 'planilhas'/ 'clientes.xlsx', she
 with pd.ExcelFile(pasta_atual/ 'planilhas'/ 'copia_clientes.xlsx') as nova_planilha:
     tabela_cliente_rs.to_excel(nova_planilha, sheet_name= 'RS', index = False)
     tabela_cliente_sc.to_excel(nova_planilha, sheet_name= 'SC', index = False)
+'''
