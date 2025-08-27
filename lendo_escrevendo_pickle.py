@@ -45,3 +45,10 @@ with open(pasta_atual/ 'pickles'/ 'inst_joao.pickle', 'rb') as f:
     minha_instancia_lida = pickle.load(f)
 
 minha_instancia_lida.quem_sou_eu()
+
+dados = {"nome": "Ana", "idade": 25}
+with open("dados.pkl", "wb") as arquivo:
+    pickle.dump(dados, arquivo)
+with open("dados.pkl", "rb") as arquivo:
+    resultado = pickle.load(arquivo)
+print(resultado["idade"])
